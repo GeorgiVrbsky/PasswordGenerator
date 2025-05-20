@@ -22,7 +22,7 @@ public class random {
             switch (random_picker){
                 case 0:
                 {
-                    if(Upper==true) {
+                    if(Upper) {
                         char upper_Case_Random = upper_Case.charAt(random.nextInt(upper_Case.length()));
                         final_password[k] = String.valueOf(upper_Case_Random);
                         k++;
@@ -31,7 +31,7 @@ public class random {
                 }
                 case 1:
                 {
-                    if(Lower==true) {
+                    if(Lower) {
                         char lower_Case_Random = lower_Case.charAt(random.nextInt(lower_Case.length()));
                         final_password[k] = String.valueOf(lower_Case_Random);
                         k++;
@@ -40,7 +40,7 @@ public class random {
                 }
                 case 2:
                 {
-                    if(Numbers==true) {
+                    if(Numbers) {
                         char numbers_Random = numbers.charAt(random.nextInt(numbers.length()));
                         final_password[k] = String.valueOf(numbers_Random);
                         k++;
@@ -49,7 +49,7 @@ public class random {
                 }
                 case 3:
                 {
-                    if(Characters==true) {
+                    if(Characters) {
                         char characters_Random = characters.charAt(random.nextInt(characters.length()));
                         final_password[k] = String.valueOf(characters_Random);
                         k++;

@@ -80,11 +80,9 @@ public class Frame implements ActionListener {
 
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
 
-        copy.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ae) {
-                StringSelection selection = new StringSelection(textField.getText());
-                clipboard.setContents(selection, null);
-            }
+        copy.addActionListener(ae -> {
+            StringSelection selection = new StringSelection(textField.getText());
+            clipboard.setContents(selection, null);
         });
 
 
@@ -114,7 +112,7 @@ public class Frame implements ActionListener {
 
     public void actionPerformed(ActionEvent e) {
         random random = new random();
-        if(checkBoxUpper.isSelected()==true || checkBoxLower.isSelected()==true || checkBoxNumbers.isSelected()==true || checkBoxCharacters.isSelected()==true) {
+        if(checkBoxUpper.isSelected() || checkBoxLower.isSelected() || checkBoxNumbers.isSelected() || checkBoxCharacters.isSelected()) {
             if (e.getSource() == generate) {
                 int n = Integer.parseInt(label.getText());
                 textField.setText(random.Password_Generator(n, checkBoxUpper.isSelected(), checkBoxLower.isSelected(), checkBoxNumbers.isSelected(), checkBoxCharacters.isSelected()));

@@ -13,13 +13,10 @@ public class Slider extends JSlider {
         setPaintLabels(true);
         setBounds(25,300,200,50);
 
-        addChangeListener(new ChangeListener() {
-          @Override
-        public void stateChanged(ChangeEvent e) {
-            int sliderValue = Slider.this.getValue();
-            frame.updateSliderValue(sliderValue);
-        }
-    });
+        addChangeListener(e -> {
+          int sliderValue = Slider.this.getValue();
+          frame.updateSliderValue(sliderValue);
+      });
     }
 
 
